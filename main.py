@@ -1,16 +1,26 @@
-# This is a sample Python script.
+class Dogs:
+    def __init__ (self, dogsname, age, breed):
+        self. dogsname = dogsname
+        self._age = age
+        self. breed = breed
+    def presentation(self):
+        return f'Перед Вами собака {self.dogsname} {self._age} лет, порода {self.breed}'
+dog1=Dogs('Recs', 9, 'shepherd')
+dog2=Dogs('Sharic', 3, 'dalmatian')
+print(dog2.dogsname, dog2._age, dog2.breed)
+print(dog1.dogsname, dog1._age, dog1.breed)
+class Winner(Dogs):#
+    def __init__(self, dogsname, age, breed,suit):
+        super().__init__(dogsname, age, breed)
+        self.suit = suit
+winner1=Winner('Wert',5, 'bulldog', 'red')
+print(winner1.suit)
+print(winner1.presentation())
+class Purpose(Winner):
+    def __init__(self, dogsname, age, breed, suit, purpos ):
+        super().__init__(self, dogsname, age, breed,)
+        self.purpos = purpos
+        self.suit = suit
+dogwinner=Purpose('Wert',5, 'bulldog', 'red', 'hunter')
 
-# Press Shift+F10 to execute it or replace it with your code.
-# Press Double Shift to search everywhere for classes, files, tool windows, actions, and settings.
-
-
-def print_hi(name):
-    # Use a breakpoint in the code line below to debug your script.
-    print(f'Hi, {name}')  # Press Ctrl+F8 to toggle the breakpoint.
-
-
-# Press the green button in the gutter to run the script.
-if __name__ == '__main__':
-    print_hi('PyCharm')
-
-# See PyCharm help at https://www.jetbrains.com/help/pycharm/
+print(dogwinner.__getstate__())
